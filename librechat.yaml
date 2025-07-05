@@ -39,13 +39,10 @@ registration:
    - "bizclikmedia.com"
 
 mcpServers:
-  everything:
-    # type: sse # type can optionally be omitted
-    url: http://localhost:3001/sse
   agent-proxy:
     type: streamable-http
     url: https://mcp-proxy-442557928946.europe-west2.run.app/1261034283942805504
-    initTimeout: 15000
+    initTimeout: 150000
     timeout: 600000
     headers:
       X-Api-Key: 412fd1ef-55e4-4829-92a4-ae654c0999ed
