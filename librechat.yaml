@@ -41,7 +41,7 @@ registration:
 mcpServers:
   agent-proxy:
     type: streamable-http
-    url: https://mcp-proxy-2-442557928946.europe-west2.run.app/1261034283942805504
+    url: https://proxy.mcp.ai.bizclikmedia.net/1261034283942805504
     initTimeout: 150000
     timeout: 600000
     headers:
