@@ -12,7 +12,7 @@ cache: true
 
 # Custom interface configuration
 interface:
-  customWelcome: "Welcome to BizClik AI!"
+  customWelcome: "Hi {{user.name}}, Welcome to BizClik AI!"
   endpointsMenu: true
   modelSelect: true
   parameters: true
@@ -40,13 +40,6 @@ registration:
 
 mcpServers:
   agent-proxy:
-    type: streamable-http
-    url: https://mcp-proxy-442557928946.europe-west2.run.app/1261034283942805504
-    initTimeout: 150000
-    timeout: 600000
-    headers:
-      X-Api-Key: "412fd1ef-55e4-4829-92a4-ae654c0999ed"
-  agent-proxy-r:
     type: streamable-http
     url: https://mcp-proxy-2-442557928946.europe-west2.run.app/1261034283942805504
     initTimeout: 150000
