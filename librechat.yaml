@@ -49,7 +49,7 @@ mcpServers:
 
 endpoints:
   assistants:
-    disableBuilder: false
+    disableBuilder: true
     supportedIds: [""]
     
 
