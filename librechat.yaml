@@ -45,7 +45,13 @@ mcpServers:
     initTimeout: 150000
     timeout: 600000
     headers:
-      X-Api-Key: "412fd1ef-55e4-4829-92a4-ae654c0999ed"
+      X-Api-Key: "${AGENT_PROXY_API_KEY}"
+
+endpoints:
+  assistants:
+    disableBuilder: false
+    supportedIds: [""]
+    
 
 
 # fileConfig:
