@@ -44,6 +44,7 @@ mcpServers:
     url: https://proxy.mcp.ai.bizclikmedia.net/1261034283942805504
     initTimeout: 150000
     timeout: 600000
+    chatMenu: false
     headers:
       X-Api-Key: "${AGENT_PROXY_API_KEY}"
 
