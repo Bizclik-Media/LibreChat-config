@@ -47,7 +47,15 @@ mcpServers:
     chatMenu: false
     headers:
       X-Api-Key: "${AGENT_PROXY_API_KEY}"
-
+  monday-mcp:
+    type: streamable-http
+    url: https://mcp-streamable-proxy-442557928946.europe-west1.run.app/servers/monday/mcp
+    initTimeout: 150000
+    timeout: 600000
+    chatMenu: false
+    headers:
+      X-Api-Key: "${MCP_PROXY_API_KEY}"
+      
 endpoints:
   assistants:
     disableBuilder: true
