@@ -59,7 +59,10 @@ mcpServers:
 endpoints:
   assistants:
     disableBuilder: true
-    supportedIds: ["asst_xabeH5mNZx1SYpvmmHniioHI", "asst_NLLyOoahEFMlC3U94n8MteBd", "asst_T7vPquUj1opICY4JlT11YzOL"]
+    supportedIds: 
+      - "asst_xabeH5mNZx1SYpvmmHniioHI"
+      - "asst_NLLyOoahEFMlC3U94n8MteBd"
+      - "asst_T7vPquUj1opICY4JlT11YzOL"
     
 
 
