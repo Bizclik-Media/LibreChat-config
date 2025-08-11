@@ -68,6 +68,8 @@ endpoints:
     - name: "BigQuery Agent"
       apiKey: "${AGENT_MODEL_PROXY_API_KEY}"  # Users enter their proxy API key
       baseURL: "https://agent-model-proxy-442557928946.europe-west1.run.app/bigquery-agent"
+      headers:
+        X-User-Id: "{{LIBRECHAT_USER_ID}}"
       models:
         default: ["bigquery-agent"]
         fetch: false  # MANDATORY - no /v1/models endpoint
