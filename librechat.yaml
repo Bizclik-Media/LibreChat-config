@@ -75,8 +75,7 @@ endpoints:
         default: ["bigquery-agent"]
         fetch: false  # MANDATORY - no /v1/models endpoint
       modelDisplayLabel: "BigQuery Agent"
-      titleConvo: true
-      titleModel: "bigquery-agent"
+      titleConvo: false
     
 
 
