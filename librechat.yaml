@@ -63,6 +63,17 @@ endpoints:
       - "asst_xabeH5mNZx1SYpvmmHniioHI"
       - "asst_NLLyOoahEFMlC3U94n8MteBd"
       - "asst_T7vPquUj1opICY4JlT11YzOL"
+  custom:
+    # Example 1: BigQuery Agent
+    - name: "BigQuery Agent"
+      apiKey: "${AGENT_MODEL_PROXY_API_KEY}"  # Users enter their proxy API key
+      baseURL: "https://agent-model-proxy-442557928946.europe-west1.run.app/bigquery-agent"
+      models:
+        default: ["bigquery-agent"]
+        fetch: false  # MANDATORY - no /v1/models endpoint
+      modelDisplayLabel: "BigQuery Agent"
+      titleConvo: true
+      titleModel: "bigquery-agent"
     
 
 
