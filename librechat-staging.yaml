@@ -14,7 +14,7 @@ cache: true
 interface:
   customWelcome: "Hi {{user.name}}, Welcome to BizClik AI!"
   endpointsMenu: true
-  modelSelect: true
+  modelSelect: false
   parameters: true
   sidePanel: true
   presets: true
