@@ -89,7 +89,16 @@ modelSpecs:
         model: "bigquery-agent"
         modelLabel: "BigQuery Agent TEST"
         greeting: |
-          Hi {{user.name}}, Welcome to BizClik AI! TEST
+          Test Greeting
+    - name: "agent-test-01"
+      label: "Agent Test 01 Label"
+      description: "Agent Test 01 Desc"
+      preset: 
+        endpoint: "agents"
+        agent_id: "agent_hfXUmuil-KonauAmdxfZL"
+        modelLabel: "Agent Test 01 Model Label"
+        greeting: |
+          Test Greeting 2
         
 
 # fileConfig:
