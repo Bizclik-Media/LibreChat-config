@@ -99,6 +99,15 @@ modelSpecs:
         modelLabel: "Agent Test 01 Model Label"
         greeting: |
           Test Greeting 2
+    - name: "assistant-test-01"
+      label: "Assistant Test 01 Label"
+      description: "Assistant Test 01 Desc"
+      preset: 
+        endpoint: "assistants"
+        assistant_id: "asst_xabeH5mNZx1SYpvmmHniioHI"
+        modelLabel: "Assistant Test 01 Model Label"
+        greeting: |
+          Company Report/Advertiser Socials
         
 
 # fileConfig:
