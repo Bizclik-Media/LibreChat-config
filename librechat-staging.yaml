@@ -95,7 +95,7 @@ modelSpecs:
       description: "Agent Test 01 Desc"
       preset: 
         endpoint: "agents"
-        agent_id: "agent_hfXUmuil-KonauAmdxfZL"
+        agent_id: "agent_VLUVAuPXV45UlpF_nP3x5"
         modelLabel: "Agent Test 01 Model Label"
         greeting: |
           Test Greeting 2
