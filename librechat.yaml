@@ -84,7 +84,7 @@ endpoints:
       baseURL: "https://openrouter.ai/api/v1"
       models:
         default: ["perplexity/sonar-pro"]
-        fetch: true
+        fetch: false
       titleConvo: true
       titleModel: "openai/gpt-5-nano"
       forcePrompt: false
