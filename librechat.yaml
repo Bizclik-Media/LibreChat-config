@@ -89,6 +89,18 @@ endpoints:
       modelDisplayLabel: "Rita Syndication Agent"
       titleConvo: false
       forcePrompt: false
+    - name: "AI Social Media Agent"
+      baseURL: "https://agent-model-proxy-442557928946.europe-west1.run.app/ai-social-agent/v1"
+      apiKey: "${AGENT_MODEL_PROXY_API_KEY}"
+      headers:
+        Authorization: "Bearer ${AGENT_MODEL_PROXY_API_KEY}"
+        X-User-Id: "{{LIBRECHAT_USER_ID}}"
+      models:
+        default: ["ai-social-agent"]
+        fetch: false  # MANDATORY - no /v1/models endpoint
+      modelDisplayLabel: "AI Social Agent"
+      titleConvo: false
+      forcePrompt: false
     - name: "Perplexity"
       # For `apiKey` and `baseURL`, you can use environment variables that you define.
       # recommended environment variables:
