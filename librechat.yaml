@@ -87,7 +87,9 @@ endpoints:
         default: ["rita-syndication-agent"]
         fetch: false  # MANDATORY - no /v1/models endpoint
       modelDisplayLabel: "Rita Syndication Agent"
-      titleConvo: false
+      titleEndpoint: "Perplexity"
+      titleModel: "openai/gpt-5-nano"
+      titleConvo: true
       forcePrompt: false
     - name: "AI Social Media Agent"
       baseURL: "https://agent-model-proxy-442557928946.europe-west1.run.app/ai-social-agent/v1"
