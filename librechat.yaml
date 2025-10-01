@@ -89,6 +89,18 @@ endpoints:
       modelDisplayLabel: "Rita Syndication Agent"
       titleConvo: false
       forcePrompt: false
+    - name: "Rita Syndication Agent Test"
+      baseURL: "https://agent-model-proxy-442557928946.europe-west1.run.app/rita-syndication-agent-test/v1"
+      apiKey: "${AGENT_MODEL_PROXY_API_KEY}"
+      headers:
+        Authorization: "Bearer ${AGENT_MODEL_PROXY_API_KEY}"
+        X-User-Id: "{{LIBRECHAT_USER_ID}}"
+      models:
+        default: ["rita-syndication-agent"]
+        fetch: false  # MANDATORY - no /v1/models endpoint
+      modelDisplayLabel: "Rita Syndication Agent"
+      titleConvo: false
+      forcePrompt: false
     - name: "AI Social Media Agent"
       baseURL: "https://agent-model-proxy-442557928946.europe-west1.run.app/ai-social-agent/v1"
       apiKey: "${AGENT_MODEL_PROXY_API_KEY}"
