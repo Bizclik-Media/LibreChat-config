@@ -145,8 +145,8 @@ endpoints:
       modelDisplayLabel: "AI Social Agent"
       titleConvo: false
       forcePrompt: false
-    - name: "AI Events Media Agent"
-      baseURL: "https://agent-model-proxy-442557928946.europe-west1.run.app/ai-events-media-agent/v1"
+    - name: "AI Event Media Agent"
+      baseURL: "https://agent-model-proxy-442557928946.europe-west1.run.app/ai-event-media-agent/v1"
       apiKey: "${AGENT_MODEL_PROXY_API_KEY}"
       headers:
         Authorization: "Bearer ${AGENT_MODEL_PROXY_API_KEY}"
@@ -154,7 +154,7 @@ endpoints:
       models:
         default: ["events_media_agent"]
         fetch: false  # MANDATORY - no /v1/models endpoint
-      modelDisplayLabel: "AI Events Media Agent"
+      modelDisplayLabel: "AI Event Media Agent"
       titleConvo: false
       forcePrompt: false      
     - name: "Perplexity"
