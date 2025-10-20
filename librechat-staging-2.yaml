@@ -1,0 +1,234 @@
+# For more information, see the Configuration Guide:
+# https://www.librechat.ai/docs/configuration/librechat_yaml
+
+# Configuration version (required)
+version: 1.2.8
+
+# Cache settings: Set to true to enable caching
+cache: true
+
+# File strategy s3/firebase
+# fileStrategy: "s3"
+
+# Custom interface configuration
+interface:
+  customWelcome: "Hi {{user.name}}, Welcome to BizClik AI!"
+  endpointsMenu: true
+  modelSelect: true
+  parameters: true
+  sidePanel: true
+  presets: true
+  prompts: true
+  bookmarks: true
+  multiConvo: true
+  agents: true
+  # Temporary chat retention period in hours (default: 720, min: 1, max: 8760)
+  # temporaryChatRetention: 1
+
+# Example Cloudflare turnstile (optional)
+#turnstile:
+#  siteKey: "your-site-key-here"
+#  options:
+#    language: "auto"    # "auto" or an ISO 639-1 language code (e.g. en)
+#    size: "normal"      # Options: "normal", "compact", "flexible", or "invisible"
+
+# Example Registration Object Structure (optional)
+registration:
+  socialLogins: ['saml']
+  allowedDomains:
+   - "bizclikmedia.com"
+
+mcpServers:
+  agent-proxy:
+    type: streamable-http
+    url: https://proxy.mcp.ai.bizclikmedia.net/1261034283942805504
+    initTimeout: 150000
+    timeout: 600000
+    chatMenu: false
+    headers:
+      X-Api-Key: "${AGENT_PROXY_API_KEY}"
+  monday-mcp:
+    type: streamable-http
+    url: https://mcp-streamable-proxy-442557928946.europe-west1.run.app/servers/monday/mcp
+    initTimeout: 150000
+    timeout: 600000
+    chatMenu: false
+    headers:
+      X-Api-Key: "${MCP_PROXY_API_KEY}"
+      
+endpoints:
+  assistants:
+    disableBuilder: true
+    supportedIds: 
+      - "asst_xabeH5mNZx1SYpvmmHniioHI"
+      - "asst_NLLyOoahEFMlC3U94n8MteBd"
+      - "asst_T7vPquUj1opICY4JlT11YzOL"
+  custom:
+    # Example 1: BigQuery Agent
+    - name: "BigQuery Agent"
+      baseURL: "https://agent-model-proxy-442557928946.europe-west1.run.app/bigquery-agent/v1"
+      apiKey: "${AGENT_MODEL_PROXY_API_KEY}"
+      headers:
+        Authorization: "Bearer ${AGENT_MODEL_PROXY_API_KEY}"
+        X-User-Id: "{{LIBRECHAT_USER_ID}}"
+        x-conversation-id: "{{LIBRECHAT_BODY_CONVERSATIONID}}"
+      models:
+        default: ["bigquery-agent"]
+        fetch: false  # MANDATORY - no /v1/models endpoint
+      modelDisplayLabel: "BigQuery Agent"
+      titleConvo: false
+      forcePrompt: false
+    - name: "Rita Syndication Agent"
+      baseURL: "https://agent-model-proxy-442557928946.europe-west1.run.app/rita-syndication-agent/v1"
+      apiKey: "${AGENT_MODEL_PROXY_API_KEY}"
+      headers:
+        Authorization: "Bearer ${AGENT_MODEL_PROXY_API_KEY}"
+        X-User-Id: "{{LIBRECHAT_USER_ID}}"
+        x-conversation-id: "{{LIBRECHAT_BODY_CONVERSATIONID}}"
+      models:
+        default: ["rita-syndication-agent"]
+        fetch: false  # MANDATORY - no /v1/models endpoint
+      modelDisplayLabel: "Rita Syndication Agent"
+      titleEndpoint: "Perplexity"
+      titleModel: "openai/gpt-5-nano"
+      titleConvo: true
+      forcePrompt: false
+    - name: "Rita Syndication Agent Test"
+      baseURL: "https://agent-model-proxy-442557928946.europe-west1.run.app/rita-syndication-agent-test/v1"
+      apiKey: "${AGENT_MODEL_PROXY_API_KEY}"
+      headers:
+        Authorization: "Bearer ${AGENT_MODEL_PROXY_API_KEY}"
+        X-User-Id: "{{LIBRECHAT_USER_ID}}"
+        x-conversation-id: "{{LIBRECHAT_BODY_CONVERSATIONID}}"
+      models:
+        default: ["rita-syndication-agent"]
+        fetch: false  # MANDATORY - no /v1/models endpoint
+      modelDisplayLabel: "Rita Syndication Agent"
+      titleEndpoint: "Perplexity"
+      titleModel: "openai/gpt-5-nano"
+      titleConvo: true
+      forcePrompt: false
+    - name: "Rita Syndication Agent B"
+      baseURL: "https://agent-model-proxy-442557928946.europe-west1.run.app/rita-syndication-agent-test/v1"
+      apiKey: "${AGENT_MODEL_PROXY_API_KEY}"
+      headers:
+        Authorization: "Bearer ${AGENT_MODEL_PROXY_API_KEY}"
+        X-User-Id: "{{LIBRECHAT_USER_ID}}"
+        x-conversation-id: "{{LIBRECHAT_BODY_CONVERSATIONID}}"
+      models:
+        default: ["rita-syndication-agent-b"]
+        fetch: false  # MANDATORY - no /v1/models endpoint
+      modelDisplayLabel: "Rita Syndication Agent B"
+      titleEndpoint: "Perplexity"
+      titleModel: "openai/gpt-5-nano"
+      titleConvo: true
+      forcePrompt: false
+    - name: "Rita Syndication Agent C"
+      baseURL: "https://agent-model-proxy-442557928946.europe-west1.run.app/rita-syndication-agent-test/v1"
+      apiKey: "${AGENT_MODEL_PROXY_API_KEY}"
+      headers:
+        Authorization: "Bearer ${AGENT_MODEL_PROXY_API_KEY}"
+        X-User-Id: "{{LIBRECHAT_USER_ID}}"
+        x-conversation-id: "{{LIBRECHAT_BODY_CONVERSATIONID}}"
+      models:
+        default: ["rita-syndication-agent-c"]
+        fetch: false  # MANDATORY - no /v1/models endpoint
+      modelDisplayLabel: "Rita Syndication Agent C"
+      titleEndpoint: "Perplexity"
+      titleModel: "openai/gpt-5-nano"
+      titleConvo: true
+      forcePrompt: false
+    - name: "AI Social Media Agent"
+      baseURL: "https://agent-model-proxy-442557928946.europe-west1.run.app/ai-social-agent/v1"
+      apiKey: "${AGENT_MODEL_PROXY_API_KEY}"
+      headers:
+        Authorization: "Bearer ${AGENT_MODEL_PROXY_API_KEY}"
+        X-User-Id: "{{LIBRECHAT_USER_ID}}"
+        x-conversation-id: "{{LIBRECHAT_BODY_CONVERSATIONID}}"
+      models:
+        default: ["ai-social-agent"]
+        fetch: false  # MANDATORY - no /v1/models endpoint
+      modelDisplayLabel: "AI Social Agent"
+      titleConvo: false
+      forcePrompt: false
+    - name: "AI Events Media Agent"
+      baseURL: "https://agent-model-proxy-442557928946.europe-west1.run.app/ai-events-media-agent/v1"
+      apiKey: "${AGENT_MODEL_PROXY_API_KEY}"
+      headers:
+        Authorization: "Bearer ${AGENT_MODEL_PROXY_API_KEY}"
+        X-User-Id: "{{LIBRECHAT_USER_ID}}"
+        x-conversation-id: "{{LIBRECHAT_BODY_CONVERSATIONID}}"
+      models:
+        default: ["events_media_agent"]
+        fetch: false  # MANDATORY - no /v1/models endpoint
+      modelDisplayLabel: "AI Events Media Agent"
+      titleConvo: false
+      forcePrompt: false      
+    - name: "Perplexity"
+      # For `apiKey` and `baseURL`, you can use environment variables that you define.
+      # recommended environment variables:
+      apiKey: "${OPENROUTER_KEY}" # NOT OPENROUTER_API_KEY
+      baseURL: "https://openrouter.ai/api/v1"
+      models:
+        default: ["perplexity/sonar-pro"]
+        fetch: false
+      titleConvo: true
+      titleModel: "openai/gpt-5-nano"
+      forcePrompt: false
+      # Recommended: Drop the stop parameter from the request as Openrouter models use a variety of stop tokens.
+      dropParams: ["stop", "frequency_penalty"]
+      modelDisplayLabel: "Perplexity"
+    
+
+
+# fileConfig:
+#   endpoints:
+#     assistants:
+#       fileLimit: 5
+#       fileSizeLimit: 10  # Maximum size for an individual file in MB
+#       totalSizeLimit: 50  # Maximum total size for all files in a single request in MB
+#       supportedMimeTypes:
+#         - "image/.*"
+#         - "application/pdf"
+#     openAI:
+#       disabled: true  # Disables file uploading to the OpenAI endpoint
+#     default:
+#       totalSizeLimit: 20
+#     YourCustomEndpointName:
+#       fileLimit: 2
+#       fileSizeLimit: 5
+#   serverFileSizeLimit: 100  # Global server file size limit in MB
+#   avatarSizeLimit: 2  # Limit for user avatar image size in MB
+#   imageGeneration: # Image Gen settings, either percentage or px
+#     percentage: 100
+#     px: 1024
+#   # Client-side image resizing to prevent upload errors
+#   clientImageResize:
+#     enabled: false  # Enable/disable client-side image resizing (default: false)
+#     maxWidth: 1900  # Maximum width for resized images (default: 1900)
+#     maxHeight: 1900  # Maximum height for resized images (default: 1900)
+#     quality: 0.92  # JPEG quality for compression (0.0-1.0, default: 0.92)
+# # See the Custom Configuration Guide for more information on Assistants Config:
+# # https://www.librechat.ai/docs/configuration/librechat_yaml/object_structure/assistants_endpoint
+
+# Memory configuration for user memories
+# memory:
+#   # (optional) Disable memory functionality
+#   disabled: false
+#   # (optional) Restrict memory keys to specific values to limit memory storage and improve consistency
+#   validKeys: ["preferences", "work_info", "personal_info", "skills", "interests", "context"]
+#   # (optional) Maximum token limit for memory storage (not yet implemented for token counting)
+#   tokenLimit: 10000
+#   # (optional) Enable personalization features (defaults to true if memory is configured)
+#   # When false, users will not see the Personalization tab in settings
+#   personalize: true
+#   # Memory agent configuration - either use an existing agent by ID or define inline
+#   agent:
+#     # Option 1: Use existing agent by ID
+#     id: "your-memory-agent-id"
+#     # Option 2: Define agent inline
+#     # provider: "openai"
+#     # model: "gpt-4o-mini"
+#     # instructions: "You are a memory management assistant. Store and manage user information accurately."
+#     # model_parameters:
+#     #   temperature: 0.1
