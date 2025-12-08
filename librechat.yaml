@@ -84,7 +84,7 @@ endpoints:
         Authorization: "Bearer ${AGENT_MODEL_PROXY_API_KEY}"
         X-User-Id: "{{LIBRECHAT_USER_ID}}"
       models:
-        default: ["rita-syndication-agent"]
+        default: ["rita_syndication_agent"]
         fetch: false  # MANDATORY - no /v1/models endpoint
       modelDisplayLabel: "Rita Syndication Agent"
       titleEndpoint: "Perplexity"
@@ -98,7 +98,7 @@ endpoints:
         Authorization: "Bearer ${AGENT_MODEL_PROXY_API_KEY}"
         X-User-Id: "{{LIBRECHAT_USER_ID}}"
       models:
-        default: ["rita-syndication-agent"]
+        default: ["rita_syndication_agent"]
         fetch: false  # MANDATORY - no /v1/models endpoint
       modelDisplayLabel: "Rita Syndication Agent"
       titleEndpoint: "Perplexity"
@@ -112,7 +112,7 @@ endpoints:
         Authorization: "Bearer ${AGENT_MODEL_PROXY_API_KEY}"
         X-User-Id: "{{LIBRECHAT_USER_ID}}"
       models:
-        default: ["rita-syndication-agent-b"]
+        default: ["rita_syndication_agent_b"]
         fetch: false  # MANDATORY - no /v1/models endpoint
       modelDisplayLabel: "Rita Syndication Agent B"
       titleEndpoint: "Perplexity"
@@ -126,7 +126,7 @@ endpoints:
         Authorization: "Bearer ${AGENT_MODEL_PROXY_API_KEY}"
         X-User-Id: "{{LIBRECHAT_USER_ID}}"
       models:
-        default: ["rita-syndication-agent-c"]
+        default: ["rita_syndication_agent_c"]
         fetch: false  # MANDATORY - no /v1/models endpoint
       modelDisplayLabel: "Rita Syndication Agent C"
       titleEndpoint: "Perplexity"
@@ -140,7 +140,7 @@ endpoints:
         Authorization: "Bearer ${AGENT_MODEL_PROXY_API_KEY}"
         X-User-Id: "{{LIBRECHAT_USER_ID}}"
       models:
-        default: ["rita-syndication-agent-d"]
+        default: ["rita_syndication_agent_d"]
         fetch: false  # MANDATORY - no /v1/models endpoint
       modelDisplayLabel: "Rita Syndication Agent D"
       titleEndpoint: "Perplexity"
