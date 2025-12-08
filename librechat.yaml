@@ -133,6 +133,20 @@ endpoints:
       titleModel: "openai/gpt-5-nano"
       titleConvo: true
       forcePrompt: false
+    - name: "Rita Syndication Agent D"
+      baseURL: "https://agent-model-proxy-442557928946.europe-west1.run.app/rita-syndication-agent-test/v1"
+      apiKey: "${AGENT_MODEL_PROXY_API_KEY}"
+      headers:
+        Authorization: "Bearer ${AGENT_MODEL_PROXY_API_KEY}"
+        X-User-Id: "{{LIBRECHAT_USER_ID}}"
+      models:
+        default: ["rita-syndication-agent-d"]
+        fetch: false  # MANDATORY - no /v1/models endpoint
+      modelDisplayLabel: "Rita Syndication Agent D"
+      titleEndpoint: "Perplexity"
+      titleModel: "openai/gpt-5-nano"
+      titleConvo: true
+      forcePrompt: false  
     - name: "AI Social Media Agent"
       baseURL: "https://agent-model-proxy-442557928946.europe-west1.run.app/ai-social-agent/v1"
       apiKey: "${AGENT_MODEL_PROXY_API_KEY}"
