@@ -77,22 +77,8 @@ endpoints:
       modelDisplayLabel: "BigQuery Agent"
       titleConvo: false
       forcePrompt: false
-    - name: "Rita Syndication Agent"
-      baseURL: "https://agent-model-proxy-442557928946.europe-west1.run.app/rita-syndication-agent/v1"
-      apiKey: "${AGENT_MODEL_PROXY_API_KEY}"
-      headers:
-        Authorization: "Bearer ${AGENT_MODEL_PROXY_API_KEY}"
-        X-User-Id: "{{LIBRECHAT_USER_ID}}"
-      models:
-        default: ["rita-syndication-agent"]
-        fetch: false  # MANDATORY - no /v1/models endpoint
-      modelDisplayLabel: "Rita Syndication Agent"
-      titleEndpoint: "Perplexity"
-      titleModel: "openai/gpt-5-nano"
-      titleConvo: true
-      forcePrompt: false
     - name: "Rita Content Syndication Agent"
-      baseURL: "https://agent-model-proxy-442557928946.europe-west1.run.app/rita-syndication-agent-test/v1"
+      baseURL: "https://agent-model-proxy-442557928946.europe-west1.run.app/rita-syndication-agent/v1"
       apiKey: "${AGENT_MODEL_PROXY_API_KEY}"
       headers:
         Authorization: "Bearer ${AGENT_MODEL_PROXY_API_KEY}"
@@ -101,6 +87,20 @@ endpoints:
         default: ["rita_content_syndication_agent"]
         fetch: false  # MANDATORY - no /v1/models endpoint
       modelDisplayLabel: "Rita Content Syndication Agent"
+      titleEndpoint: "Perplexity"
+      titleModel: "openai/gpt-5-nano"
+      titleConvo: true
+      forcePrompt: false  
+    - name: "Proof Reader Agent"
+      baseURL: "https://agent-model-proxy-442557928946.europe-west1.run.app/rita-syndication-agent/v1"
+      apiKey: "${AGENT_MODEL_PROXY_API_KEY}"
+      headers:
+        Authorization: "Bearer ${AGENT_MODEL_PROXY_API_KEY}"
+        X-User-Id: "{{LIBRECHAT_USER_ID}}"
+      models:
+        default: ["proof_reader_agent"]
+        fetch: false  # MANDATORY - no /v1/models endpoint
+      modelDisplayLabel: "Proof Reader Agent"
       titleEndpoint: "Perplexity"
       titleModel: "openai/gpt-5-nano"
       titleConvo: true
