@@ -37,6 +37,7 @@ registration:
   socialLogins: ['saml']
   allowedDomains:
    - "bizclikmedia.com"
+   - "bizclik.ai"
 
 mcpServers:
   agent-proxy:
