@@ -158,8 +158,34 @@ endpoints:
       # Recommended: Drop the stop parameter from the request as Openrouter models use a variety of stop tokens.
       dropParams: ["stop", "frequency_penalty"]
       modelDisplayLabel: "Perplexity"
-    
-
+    - name: "Gemini"
+      # For `apiKey` and `baseURL`, you can use environment variables that you define.
+      # recommended environment variables:
+      apiKey: "${OPENROUTER_KEY}" # NOT OPENROUTER_API_KEY
+      baseURL: "https://openrouter.ai/api/v1"
+      models:
+        default: ["google/gemini-2.5-pro"]
+        fetch: false
+      titleConvo: true
+      titleModel: "openai/gpt-5-nano"
+      forcePrompt: false
+      # Recommended: Drop the stop parameter from the request as Openrouter models use a variety of stop tokens.
+      dropParams: ["stop", "frequency_penalty"]
+      modelDisplayLabel: "Gemini"
+    - name: "Claude"
+      # For `apiKey` and `baseURL`, you can use environment variables that you define.
+      # recommended environment variables:
+      apiKey: "${OPENROUTER_KEY}" # NOT OPENROUTER_API_KEY
+      baseURL: "https://openrouter.ai/api/v1"
+      models:
+        default: ["anthropic/claude-sonnet-4.5"]
+        fetch: false
+      titleConvo: true
+      titleModel: "openai/gpt-5-nano"
+      forcePrompt: false
+      # Recommended: Drop the stop parameter from the request as Openrouter models use a variety of stop tokens.
+      dropParams: ["stop", "frequency_penalty"]
+      modelDisplayLabel: "Claude"
 
 # fileConfig:
 #   endpoints:
